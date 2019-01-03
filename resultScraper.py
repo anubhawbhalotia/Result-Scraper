@@ -34,8 +34,6 @@ class_data = {}
 ROLLNO = "16MI5%02d" 
 
 for i in range(1,CLASS_CAPACITY+1):
-	if i==17:
-		continue
 	rollno = ROLLNO%i
 	r = requests.post(url=URL,data={'RollNumber':rollno})
 	h = r.content.decode()
